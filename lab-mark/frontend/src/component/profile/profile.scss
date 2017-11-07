@@ -1,0 +1,13 @@
+@import 'vars';
+
+.profile {
+  background-color: white;
+  border: 2px solid black;
+  padding: $pad;
+  width: auto;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  line-height: 2.25em;
+}

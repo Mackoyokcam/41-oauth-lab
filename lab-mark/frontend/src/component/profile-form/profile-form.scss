@@ -1,0 +1,25 @@
+@import 'vars';
+
+.profile-form {
+  line-height: 2.25em;
+  button {
+    background-color: $color-green;
+  }
+  margin-top: $margin;
+  margin-bottom: $margin;
+
+  input[type="text"], input[type="number"]{
+    display: block;
+  }
+
+  textarea {
+    border: 2px dashed $color-silver;
+    padding: $pad;
+    height: 5em;
+    margin-bottom: $margin;
+
+    &:focus {
+      border-color: $color-green;
+    }
+  }
+}

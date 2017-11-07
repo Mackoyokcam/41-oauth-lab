@@ -1,0 +1,10 @@
+@import 'vars';
+
+.auth-form {
+  line-height: 2.25em;
+  button {
+    background-color: $color-green;
+  }
+  margin-top: $margin;
+  margin-bottom: $margin;
+}

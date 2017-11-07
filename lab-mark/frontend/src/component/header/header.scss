@@ -1,0 +1,36 @@
+@import 'vars';
+
+.header {
+  h1 {
+    font-size: 3em;
+    float: left;
+    width: auto;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: inline;
+    font-family: $font-rubik;
+  }
+
+  nav {
+    float: right;
+    width: auto;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    ul {
+      width: auto;
+      float: right;
+      li {
+        display: inline;
+        a {
+          display: inline;
+          margin-right: $margin * 2;
+          text-decoration: none;
+          font-family: $font-mouse;
+          font-size: 2em;
+        }
+      }
+    }
+  }
+}

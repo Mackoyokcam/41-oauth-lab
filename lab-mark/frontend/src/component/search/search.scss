@@ -1,0 +1,14 @@
+@import 'vars';
+
+.search {
+  background-color: white;
+  border: 2px solid black;
+  padding: $pad;
+  position: relative;
+  height: 100%;
+  overflow: scroll;
+
+  h2 {
+    font-family: $font-rubik;
+  }
+}

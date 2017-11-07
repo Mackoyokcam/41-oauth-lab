@@ -1,0 +1,24 @@
+@import 'vars';
+
+.landing {
+  background-color: white;
+  border: 2px solid black;
+  padding: $pad;
+  width: 50%;
+  position: relative;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  .welcome {
+    text-align: center;
+  }
+
+  h2 {
+    font-family: $font-rubik;
+  }
+
+  a {
+    display: block;
+  }
+}

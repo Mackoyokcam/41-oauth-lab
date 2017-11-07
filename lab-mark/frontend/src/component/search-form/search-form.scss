@@ -1,0 +1,10 @@
+@import 'vars';
+
+.search-form {
+  line-height: 2.25em;
+  button {
+    background-color: $color-green;
+  }
+  margin-top: $pad;
+  margin-bottom: $pad;
+}
