@@ -18,6 +18,7 @@ class App extends React.Component {
     super(props)
 
     this.getProfile = this.getProfile.bind(this)
+    this.getFavorites = this.getFavorites.bind(this)
   }
 
   getProfile() {
@@ -30,7 +31,7 @@ class App extends React.Component {
       .catch(console.error)
   }
 
-  componentDidMount(){
+  componentWillMount(){
     if(this.props.loggedIn){
       this.getProfile()
       this.getFavorites()
@@ -47,7 +48,7 @@ class App extends React.Component {
               <Route path='*' component={AuthRedirect} />
               <Route exact path='/' component={Landing} />
               <Route exact path='/signup' component={Landing} />
-              <Route exact path='/login' render={(props) => <Landing getProfile={this.getProfile} {...props}/>} />
+              <Route exact path='/login' render={(props) => <Landing getProfile={this.getProfile} getFavorites={this.getFavorites} {...props}/>} />
               <Route exact path='/dashboard' component={Dashboard} />
               <Route exact path='/profile' component={Profile} />
               <Route exact path='/search' component={Search} />

@@ -18,8 +18,9 @@ class Landing extends React.Component {
   handleLogin(user){
     this.props.login(user)
       .then(() => {
-        this.props.history.push('/profile')
+        this.props.history.push('/search')
         this.props.getProfile()
+        this.props.getFavorites()
       })
       .catch(console.error)
   }

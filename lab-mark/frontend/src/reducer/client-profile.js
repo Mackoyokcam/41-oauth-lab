@@ -1,3 +1,5 @@
+import {rehydrateLocalStorage} from '../lib/redux-persist.js'
+
 export const validateProfile = (profile) => {
   if(!profile)
     throw new Error('profile required')
@@ -6,7 +8,9 @@ export const validateProfile = (profile) => {
     throw new Error('__VALIDATION_ERROR__ invalid profile')
 }
 
-export default (state=null, {type, payload}) => {
+let initialState = rehydrateLocalStorage('clientProfile', null)
+
+export default (state=initialState, {type, payload}) => {
   switch(type){
     case 'CLIENT_PROFILE_SET':
       validateProfile(payload)

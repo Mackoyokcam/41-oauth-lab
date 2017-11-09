@@ -1,3 +1,5 @@
+import {rehydrateLocalStorage} from '../lib/redux-persist.js'
+
 export const validateFavorite = (favorite) => {
   if(!favorite)
     throw new Error('favorite required')
@@ -12,7 +14,9 @@ let emptyState = {
   data: [],
 }
 
-export default (state=emptyState, {type, payload}) => {
+let initialState = rehydrateLocalStorage('favorites', emptyState)
+
+export default (state=initialState, {type, payload}) => {
   switch(type){
     case 'FAVORITE_SET':
       return payload
