@@ -1,7 +1,7 @@
 import * as util from '../lib/util.js'
+import {rehydrateCookie} from '../lib/redux-persist.js'
 
-let token = util.cookieFetch('X-Charity-Token')
-let intialState = token ? token : null
+let intialState = rehydrateCookie('X-Charity-Token', null)
 
 export default (state=intialState, {type, payload}) => {
   switch(type){
